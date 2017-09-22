@@ -1,0 +1,108 @@
+TITLE : Rapport of cpp labs 
+---------------------------
+
+AUTHOR : YAHMED Taycir
+----------------------
+
+RECOMMANDATIONS :
+-----------------
+	
+	* For the CPP part: 
+		- Type 'make run' to compile and lunch the original project
+		- Type 'make -f Makefile-cliserv' to compile the server/client part 
+
+	* For the SWING part:
+		- Type 'make run' to compile and start the graphical interface
+
+
+
+PART I : CPP
+------------
+
+
+Remark 1 : In certain sections of the answers I choose to give the answer in French to make the correction easier. 
+Remark 2 : In the main.cpp file I put the code to test some functionalities commented : uncomment them to test the target functionnality. 
+Remark 3 : The file 'multimediaData' is used in serialization. 
+
+	* Step 1 : 
+		Nothing to comment : Successfully implemented .
+
+	* Step 2 :
+		Nothing to comment : Successfully implemented .
+
+	* Step 3 :
+		Nothing to comment : Successfully implemented .
+
+	* Step 4 :
+		Comment appelle-t'on ce type de méthode et comment faut-il les déclarer ? => méthode abstraite
+		"Si vous avez fait correctement ce qui précède, il ne sera plus possible d'instancer des objets de la classe de base.
+		Pourquoi ?" => Classe désormais abstraite .
+
+	* Step 5 :
+		Quelle est la propriété caractéristique de l'orienté objet qui permet de faire cela ? =>  polymorphisme
+		Qu'est-il spécifiquement nécessaire de faire dans le cas du C++ ? Soit on la déclare "virtual" soit abstraite.
+		Dans les deux cas on utilise un pointeur pour accéder à l'objet.
+		Quel est le type des éléments du tableau : Est-ce que ce tableau contient les objets ou des pointeurs vers ces objets ? Pourquoi ? 
+		=> des pointeurs vers des objets, car il n'est pas possible d'allouer un objet abstrait.
+
+	* Step 6 :
+		Que faut-il faire pour que l'objet Film ait plein contrôle sur ses données et que son tableau de durées des chapitres
+		ne puisse pas être modifié (ou pire, détruit) à son insu ? 
+		=> modifieur ou constructeur: l'argument doit etre const pour interdire la modification du tableau par l'objet.
+		=> accesseur : retour const pour interdire la modification du tableau à l'insu de l'objet.
+
+	* Step 7 : 
+		Parmi les classes précédemment écrites quelles sont celles qu'il faut modifier afin qu'il n'y ait pas de
+		fuite mémoire quand on détruit leurs instances ? => classe Film car elle seule contient un pointeur vers un tableau (les autres d'ont
+		que des variables d'instance, qui se détruisent automatiquement) : modifier son destructeur pour libérer la mémoire alloué au tableau.
+
+		De même, la copie d'objets peut poser problème dans certains cas. Pourquoi et que faudrait-il faire ?
+		=> peuvent pointer sur le meme espace memoire et peuvent causer des erreurs de destruction multiples d'un meme objet
+
+	* Step 8 :
+		On rappelle aussi que la liste d'objets doit en fait être une liste de pointeurs d'objets. Pourquoi ?
+		=> Car la destruction du groupe ne doit pas entrainer celle des éléments qu'il contient (peuvent appartenir à d'autres groupes).
+
+	* Step 9 :
+		Nothing to comment : Successfully implemented .
+
+	* Step 10 : 
+		Additional questions : "delete item" implemented .
+
+	* Step 11 : 
+		Additional questions : commands to print all the database content, to print all files of certain type (images, films or videos) and delete an item/group implemented. 
+
+		Allowed commands :
+			- print <file name>
+			- print <group name>
+			- print *
+			- print images
+			- print videos 
+			- print films
+			- del <file name>
+			- del <group name>
+			- play <file name>
+
+	* Step 12 :
+		For the attributes with spaces : I handle that by replacing the space with the character '_' .
+
+	* Step 13 : 
+		I choose the first strategy: For the 4 examples given in the lab I test conditions and return error codes. 
+
+
+PART II : SWING
+---------------
+
+	* Step 1 : 
+		Nothing to comment : Successfully implemented .
+
+	* Step 2 :
+		Nothing to comment : Successfully implemented .
+
+	* Step 3 :
+		Added Radio Buttons/Button Group (print all the database content, to print all files of certain type : images, films or videos) and the deleting command .
+
+	* Step 4 :
+		Nothing to comment : Successfully implemented .
+
+   

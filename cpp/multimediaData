@@ -1,0 +1,4 @@
+Film filmname 3.000000 2.000000 3.000000 3.000000 
+Image pic2 ./tay.jpg 25 25
+Image pic3 ./tay.jpg 25 25
+Video vidname vidpath 0
