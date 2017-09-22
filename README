@@ -15,9 +15,8 @@ RECOMMANDATIONS :
 		- Type 'make run' to compile and start the graphical interface
 
 
-
-PART I : CPP
-------------
+ANSWERS OF QUESTIONS : CPP
+--------------------------
 
 
 Remark 1 : In certain sections of the answers I choose to give the answer in French to make the correction easier. 
@@ -90,8 +89,8 @@ Remark 3 : The file 'multimediaData' is used in serialization.
 		I choose the first strategy: For the 4 examples given in the lab I test conditions and return error codes. 
 
 
-PART II : SWING
----------------
+ANSWERS OF QUESTIONS : SWING
+----------------------------
 
 	* Step 1 : 
 		Nothing to comment : Successfully implemented .
